@@ -1,0 +1,22 @@
+<section>
+
+    @if (detailsCategires) {
+        <section class="p-3">
+            <h1 class="text-center text-main fw-bolder"> Detaile categories</h1>
+           <div class="row align-items-center">
+            <div class="col-md-3">
+                
+                            <img [src]="detailsCategires.image" class="w-100"  alt="">
+        
+            </div>
+            <div class="col-md-9">
+                <h2 class="text-main">{{detailsCategires.name}}</h2>
+
+             
+            
+        
+            </div>
+           </div>
+        </section>
+    }
+</section>

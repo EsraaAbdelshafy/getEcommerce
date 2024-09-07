@@ -1,0 +1,23 @@
+<p>allorders works!</p>
+
+<section class="bg-main-light p-4 my-4 shadow rounded-4  w-75 mx-auto">
+  
+    @for (item of cartDetails.products; track item.product.id) {
+        <div class="row mb-1 border-bottom ">
+            <div class="col-md-1">
+                <img [src]="item.product.imageCover" class="w-100"  [alt]="item.product.title">
+            </div>
+            <div class="col-md-11 d-flex justify-content-between align-items-center">
+                <div>
+                    <h3 class="h6">{{item.product.title}}</h3>
+                    <p class="text-main m-0">price:{{item.price}}</p>
+                  
+                </div> 
+               
+
+            </div>
+    
+        </div>
+    }
+   >
+</section>

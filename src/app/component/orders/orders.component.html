@@ -1,0 +1,16 @@
+<section class="bg-main-light my-4 shadow w-75 mx-auto rounded-4">
+
+    <h1 class="h3 text-main fw-bold  p-2">
+        shippingAddress:
+    </h1>
+    <form class="p-3 " [formGroup]=" orders">
+        <label for="detalis">detalis</label>
+       <textarea type="text" name="detalis" id="detalis" class="form-control" formControlName="details"></textarea>
+        <label for="phone">phone</label>
+        <input type="tel" id="phone"class="form-control" formControlName="phone">
+        <label for="city">city</label>
+        <input type="text" id="city" class="form-control" formControlName="city">
+
+        <button (click)="ordersubmit()" class="btn btn-main m-2" type="submit">check out</button>
+    </form>
+</section>

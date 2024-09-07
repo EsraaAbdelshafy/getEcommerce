@@ -1,0 +1,16 @@
+<section>
+    <h2 class=" text-center text-main fw-bolder ">
+        Brands List
+    </h2>
+    <div class="row p-2 justify-content-around align-items-center ">
+        @for (brand of brandsList; track brand._id) {
+            <div class="col-md-3 g-3 cr">
+               <div class="product p-3" [routerLink]="['/brandDetails',brand._id]" >
+                <img [src]="brand.image"  class="w-100" height="250px" [alt]="brand.name">
+                <h3 class="h4  text-main text-center">{{brand.name}}</h3>
+                
+               </div>
+            </div>
+        }
+    </div>
+</section>

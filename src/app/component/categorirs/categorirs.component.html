@@ -1,0 +1,30 @@
+<section>
+  <div>
+    <h2 class="text-center text-main p-3  fw-bolder w-25 mx-auto border-success rounded border-bottom">All categories</h2>
+    
+  </div>
+
+    <div class="row p-2 justify-content-around ">
+        @for (cat of allCategoriesI; track cat._id) {
+            <div class="col-md-3 g-3 ">
+               <div class="product p-3">
+                <h3 class="h4  text-main">{{cat.name}}</h3>
+                <img [src]="cat.image"  class="w-100" height="250px" alt="">
+               </div>
+            </div>
+        }
+    </div>
+</section>
+<!-- subcategoried -->
+<section>
+    <h2 class="text-center text-main p-3 cr fw-bolder w-25 mx-auto border-success rounded border-bottom" >Sub categories</h2>
+    <div class="row p-2 justify-content-around ">
+        @for (sub of subCategoriesList; track sub._id) {
+            <div class="col-md-3 g-3 ">
+               <div class="product p-3"   [routerLink]="['/subcatdetalis',sub._id]">
+                <span>{{sub.name}}</span>
+               </div>
+            </div>
+        }
+    </div>
+</section>

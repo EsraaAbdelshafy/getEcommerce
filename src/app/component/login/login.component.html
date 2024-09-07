@@ -1,0 +1,32 @@
+<section>
+    <div class="contaner bg-main-light shadow m-2  p-4 rounded-4">
+        <h1 class="text-main h4">log in:</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+            <label for="email">email</label>
+            <input type="email" id="email" class="form-control " formControlName="email"  >
+      
+            <label for="password">password</label>
+            <input type="password" id="password" class="form-control " formControlName="password"  >
+
+           <div class=" d-flex align-items-center justify-content-end gap-4">
+            <a routerLink="/forget" class="link-primary"> forget password</a>
+
+        
+            <button [disabled]="loginForm.invalid" type="submit" class="btn-main m-2 d-flex">
+                Log in
+                @if (isloading) {
+                    <span><i class="fas fa-spin fa-spinner"></i></span>
+            }
+            
+            </button>
+            
+
+            
+
+           </div>
+            
+            
+           
+        </form>
+    </div>
+</section>
